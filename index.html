@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strarbucks</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- FONT AWESOME LINK -->
+    <script src="https://kit.fontawesome.com/ba2b6da4f2.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="circle"></div>
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" id="logo" />
+          <ul class="menu_list">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="content">
+          <div class="content-col1">
+            <h1 class="heading1">
+              It's not just coffee <br />It's
+              <strong>Starbucks</strong>
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tempora praesentium dolores repellat quae magnam eum amet
+              officiis similique, rem numquam nulla impedit itaque cupiditate? Blanditiis, ab quos?
+            </p>
+            <a href="#" id="button">Learn More</a>
+          </div>
+          <div class="content-col2">
+            <img src="images/1.png" id="starbucks" />
+          </div>
+        </div>
+
+        <ul class="menu-content">
+          <li><img src="images/1.png" onclick=" imgSlider('images/1.png'); changeBgColor('#008f4d')" /></li>
+          <li><img src="images/2.png" onclick=" imgSlider('images/2.png'); changeBgColor('#ff7675')" /></li>
+          <li><img src="images/3.png" onclick=" imgSlider('images/3.png'); changeBgColor('#e84393')" /></li>
+        </ul>
+      </div>
+      <ul id="social_links">
+        <li>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Javascript  -->
+
+    <script>
+      //menu bar
+      let menuList = document.querySelector(".menu_list");
+      function showMenu() {
+        menuList.style.right = "0px";
+      }
+      function hideMenu() {
+        menuList.style.right = "-200px";
+      }
+      //slide items
+      function imgSlider(anything) {
+        document.getElementById("starbucks").src = anything;
+      }
+      //slide items background color
+      function changeBgColor(color) {
+        let circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+    </script>
+  </body>
+</html>
